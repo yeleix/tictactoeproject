@@ -1,2 +1,110 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+$background-color: #363636;
+$font-color: #dfdfdf;
+$orange: #e67e00 ;
+$darkgrey: #363636;
+$medgrey: #636363;
+$lightgrey: #c3c3c3;
+$black: #000;
+$darkorange: #cd661d;
+$white: #ffffff;
+
+body {
+  background-color: $background-color;
+  background-image: url("http://cuhvz.com/images/cover-invert.png");
+  background-position: bottom;
+  color: $font-color;
+  font-size: 12px;
+  font-family: 'Hind', sans-serif;
+  margin-top: 20px;
+  background-repeat: no-repeat, repeat;
+}
+
+h1 {
+  color: $darkorange;
+  font-size: 80px;
+  font-weight: bold;
+  padding: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $medgrey;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.board {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 80%;
+  height: 900px;
+  padding: 40px;
+
+}
+
+.box {
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  border: 1px solid $medgrey;
+  font-size: 70pt;
+  float: left;
+
+}
+
+.cell.win {
+  color: red;
+}
+
+.top-left {
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.top-mid {
+  border-top: 0px;
+}
+
+.top-right {
+  border-top: 0px;
+  border-right: 0px;
+}
+
+.mid-left {
+  border-left: 0px;
+}
+
+.mid-right {
+  border-right: 0px;
+}
+
+.bottom-left {
+  border-left: 0px;
+  border-bottom: 0px;
+}
+
+.bottom-mid {
+  border-bottom: 0px;
+}
+
+.bottom-right {
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+
+button {
+  background: $darkorange;
+  padding: 10px;
+  font-size: 10px;
+  margin-top: 10px;
+}
