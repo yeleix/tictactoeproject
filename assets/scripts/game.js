@@ -1,4 +1,5 @@
 'use strict'
+
 $(() => {
   const cells = $('.cell');
   const symbols = ['&times;', '&#9675;'];
