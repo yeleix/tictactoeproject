@@ -71,7 +71,6 @@ $('.ss').text('');
   const winResizeHandler = () => {
     let c = cells,
     let w = c.width();
-    c
     .css({
         'line-height': `${w * 0.92}px`,
         'font-size': `${w}px`
