@@ -1,7 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-
 $background-color: #363636;
 $font-color: #dfdfdf;
 $orange: #e67e00 ;
@@ -13,12 +12,12 @@ $darkorange: #cd661d;
 $white: #ffffff;
 
 body {
-  background-color: $background-color;
+  background-color: black;
   background-image: url("http://cuhvz.com/images/cover-invert.png");
   background-position: bottom;
-  color: $font-color;
+  color: $lightgrey;
   font-size: 12px;
-  font-family: 'Hind', sans-serif;
+  font-family: arial;
   margin-top: 20px;
   background-repeat: no-repeat, repeat;
 }
@@ -42,69 +41,71 @@ h3 {
 }
 
 
-.board {
-  margin: 0 auto;
-  max-width: 900px;
-  width: 80%;
-  height: 900px;
-  padding: 40px;
-
+.board, .msg {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 80%;
+	max-width: 400px;
 }
-
-.box {
-  margin: 0 auto;
-  height: 150px;
-  width: 150px;
-  border: 1px solid $medgrey;
-  font-size: 70pt;
-  float: left;
-
+.board {
+	position: relative;
+	background-color: $medgrey;
+}
+@media (max-width: 400px) {
+	.board {
+		width: 90%;
+	}
+}
+.cell {
+	width: 30%;
+	margin: 1.6%;
+	float: left;
+	background-color: $darkgrey;
+	text-align: center;
 }
 
 .cell.win {
-  color: red;
+	color: $darkorange;
 }
 
-.top-left {
-  border-left: 0px;
-  border-top: 0px;
+.player {
+	width: 50%;
+	height: 80px;
+	float: left;
+	text-align: center;
 }
-
-.top-mid {
-  border-top: 0px;
+.arrow, .mark {
+	width: 60%;
 }
-
-.top-right {
-  border-top: 0px;
-  border-right: 0px;
+.player1 > div {
+	float: right;
 }
-
-.mid-left {
-  border-left: 0px;
+.player2 > div {
+	float: left;
 }
-
-.mid-right {
-  border-right: 0px;
+.arrow {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
 }
-
-.bottom-left {
-  border-left: 0px;
-  border-bottom: 0px;
+.arrow.inv {
+	visibility: hidden;
 }
-
-.bottom-mid {
-  border-bottom: 0px;
+.arrow-r {
+	border-left: 20px solid $darkorange;
 }
-
-.bottom-right {
-  border-right: 0px;
-  border-bottom: 0px;
+.arrow-l {
+	border-right: 20px solid $darkorange;
 }
-
-
-button {
-  background: $darkorange;
-  padding: 10px;
-  font-size: 10px;
-  margin-top: 10px;
+.mark {
+	font-size: 80px;
+	line-height: 20px;
+}
+.ss {
+	clear: both;
+	font-size: 16px;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 22px 0;
 }
