@@ -71,7 +71,11 @@ $('.ss').text('');
   const winResizeHandler = () => {
     let c = cells,
     let w = c.width();
+<<<<<<< HEAD
     c
+=======
+
+>>>>>>> gameindexhtml01
     .css({
         'line-height': `${w * 0.92}px`,
         'font-size': `${w}px`
