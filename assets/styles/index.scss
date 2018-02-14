@@ -40,7 +40,6 @@ h3 {
   text-transform: uppercase;
 }
 
-
 .board, .msg {
 	margin: 0 auto;
 	margin-top: 30px;
@@ -51,11 +50,13 @@ h3 {
 	position: relative;
 	background-color: $medgrey;
 }
+
 @media (max-width: 400px) {
 	.board {
 		width: 90%;
 	}
 }
+
 .cell {
 	width: 30%;
 	margin: 1.6%;
@@ -80,28 +81,35 @@ h3 {
 .player1 > div {
 	float: right;
 }
+
 .player2 > div {
 	float: left;
 }
+
 .arrow {
 	width: 0;
 	height: 0;
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
 }
+
 .arrow.inv {
 	visibility: hidden;
 }
+
 .arrow-r {
 	border-left: 20px solid $darkorange;
 }
+
 .arrow-l {
 	border-right: 20px solid $darkorange;
 }
+
 .mark {
 	font-size: 80px;
 	line-height: 20px;
 }
+
 .ss {
 	clear: both;
 	font-size: 16px;

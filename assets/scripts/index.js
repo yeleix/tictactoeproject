@@ -71,9 +71,9 @@ $('.ss').text('');
     const c = cells;
     const w = c.width();
     c
-.css({
-'line-height': `${w * 0.92}px`,
-'font-size': `${w}px`
+    .css({
+        'line-height': `${w * 0.92}px`,
+        'font-size': `${w}px`
       })
 .height(w);
   };
