@@ -40,56 +40,55 @@ $(() => {
     6: ['combo2', 'combo3', 'combo7'],
     7: ['combo2', 'combo4'],
     8: ['combo2', 'combo5', 'combo6']
-};
+  };
 
   const showArrow = p => { // invisible --> hides arrow thats not currently on the current player
     if (p % 2 === 0) {
       $('.player1 > .arrow').removeClass('inv');
       $('.player2 > .arrow').addClass('inv');
-    }
-else {
+    } else {
       $('.player1 > .arrow').addClass('inv');
       $('.player2 > .arrow').removeClass('inv');
     }
   };
 
-  const initGame = () => {
-    if (gameOver) {
-      cells.empty();
-      for (let i = 0; i < 9; i++) {
-        currentState[i] = null;
-      };
+  //  const initGame = () => {
+  //  if (gameOver) {
+  //  cells.empty();
+  //  for (let i = 0; i < 9; i++) {
+  //    currentState[i] = null;
+  //  };
 
-currentStep = 0;
-showArrow(currentStep); // this determines which side the arrow will be on depending on which player is playing
-gameOver = false;
-cells.removeClass('win');
-$('.ss').text('');
-    }
-  };
-  initGame();
-  const winResizeHandler = () => {
-    let c = cells,
-    let w = c.width();
-<<<<<<< HEAD
-    c
-=======
+  // currentStep = 0;
+  // showArrow(currentStep); // this determines which side the arrow will be on depending on which player is playing
+  // gameOver = false;
+  // cells.removeClass('win');
+  // $('.ss').text('');
+  //  }
+  //  };
+  //  initGame();
+  //  const winResizeHandler = () => {
+  //    let c = cells,
+  //  let w = c.width();
+  // <<<<<<< HEAD
+  // c
+  // =======
 
->>>>>>> gameindexhtml01
-    .css({
-        'line-height': `${w * 0.92}px`,
-        'font-size': `${w}px`
-      })
-.height(w);
-  };
-$(window) // after browser has changed, this helps to resize
-    .resize(winResizeHandler)
-    .keydown(e => {
-      e.preventDefault();
-      initGame();
-});
+  // >>>>>>> gameindexhtml01
+  // .css({
+  //     'line-height': `${w * 0.92}px`,
+  //    'font-size': `${w}px`
+  //  })
+  // .height(w);
+  //  };
+  // $(window) // after browser has changed, this helps to resize
+  //  .resize(winResizeHandler)
+  //  .keydown(e => {
+  //  e.preventDefault();
+  //  initGame();
+  // });
 
-  winResizeHandler();  // action that will be performed when browser window is resized
+  winResizeHandler(); // action that will be performed when browser window is resized
 
   const checkCombo = a => {
     const a0 = currentState[a[0]];
@@ -111,7 +110,7 @@ $(window) // after browser has changed, this helps to resize
       if (currentState[i] === null) {
         const s = symbols[currentStep++ % 2];
         currentState[i] = s;
-        $this.html(s);      // loops in to check if game is not over
+        $this.html(s); // loops in to check if game is not over
         for (let j = 0, len = potentialCombos[i].length; j < len; j++) {
           if (checkCombo(winningCombos[potentialCombos[i][j]])) {
             console.log(`${s}won`);
