@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+</head>
+<center>
+  <!--navbar buttons-->
+ <body>
+  <nav class="navbar navbar-default">
+   <div class="container-fluid">
+     <div class="container-fluid">
+
+     <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#changePassword" id="change-password-button">CHANGE PASSWORD</button>
+     <button type="button" class="btn btn-warning log-out" data-toggle="modal" id="sign-out-button">SIGN OUT</button>
+
+     </div>
+   </div>
+ </nav>
+
+<h1>tic tac toe.</h1>
+
+
+<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signUp" id="sign-up-button">SIGN UP</button>
+<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#signIn" id="sign-in-button">LOG IN</button>
+
+
+      <!-- MODAL: SIGN UP -->
+     <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <h4 class="modal-title" id="myModalLabel">SIGN UP</h4>
+     </div>
+
+     <!--  SIGN UP FORM-->
+     <div class="modal-body">
+     <form id="sign-up" class="auth">
+     <fieldset>
+     <input type="text" name="credentials[email]" placeholder="Email">
+     <input type="password" name="credentials[password]" placeholder="Password">
+     <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+     <input type="submit" value="Sign Up">
+     </fieldset>
+     </form>
+     </div>
+     </div>
+     </div>
+     </div>
+
+     <!-- MODAL: SIGN IN -->
+     <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <h4 class="modal-title" id="myModalLabel">SIGN IN</h4>
+     </div>
+     <!--  SIGN IN FORM-->
+     <div class="modal-body">
+     <form id="sign-in" class="auth">
+     <fieldset>
+     <input type="text" name="credentials[email]" placeholder="Email">
+     <input type="password" name="credentials[password]" placeholder="Password">
+     <input type="submit" value="Sign in">
+     </fieldset>
+     </form>
+     </div>
+     </div>
+     </div>
+     </div>
+
+     <!-- MODAL: CHANGE PASSWORD -->
+     <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+     <div class="modal-content">
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+     <h4 class="modal-title" id="myModalLabel">CHANGE PASSWORD</h4>
+     </div>
+     <!--  CHANGE PASSWORD FORM-->
+     <div class="modal-body">
+     <form id="change-password" class="border">
+     <fieldset>
+     <input type="password" name="passwords[old]" placeholder="old password">
+     <input type="password" name="passwords[new]" placeholder="new password">
+     <input type="submit" value="change!">
+     </fieldset>
+     </form>
+     </div>
+     </div>
+     </div>
+     </div>
+
+  <div id="message"></div>
+  <div class='game-message' id="game-message"></div>
+  <br>
+  <table border="1">
+    <tr>
+      <td class="Square" id="s1"></td>
+      <td class="Square" id="s2"></td>
+      <td class="Square" id="s3"></td>
+    </tr>
+    <tr>
+      <td class="Square" id="s4"></td>
+      <td class="Square" id="s5"></td>
+      <td class="Square" id="s6"></td>
+    </tr>
+    <tr>
+      <td class="Square" id="s7"></td>
+      <td class="Square" id="s8"></td>
+      <td class="Square" id="s9"></td>
+    </tr>
+  </table>
+
+  <button id='start-over'>New Game</button>
+  <button id='game-history'>Game History</button>
+
+</center>
+</body>
+</html>
