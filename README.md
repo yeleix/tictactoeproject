@@ -3,21 +3,27 @@
 # Tic Tac Toe
 
 
-## Technologies Used
+## LANGUAGES AND PLATFORMS USED
 
 - HTML
 - CSS
+- JavaScript
 - SASS
 - JQuery
-- (bootstrap)
+- bootstrap
+- Jquery & AJAX
 
 
-## Planing/Modeling
+## DEVELOPMENT PROCESS
 
 1. Create wireframe and user stories
-2. Create html/css
+2. Create HTML / CSS
 3. Create game logic
-4. Started authenication
+4. Authentication (shell-scripts)
+5. Authentication API
+6. Game API
+7. UI
+8. HTML / CSS (some more)
 
 
 ## Still Needs To Work On
